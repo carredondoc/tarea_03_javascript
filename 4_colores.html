@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 200px;
+        height: 200px;
+      }
+
+      #azul {
+        background-color: blue;
+      }
+
+      #rojo {
+        background-color: red;
+      }
+
+      #verde {
+        background-color: green;
+      }
+
+      #amarillo {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="azul"></div>
+    <div id="rojo"></div>
+    <div id="verde"></div>
+    <div id="amarillo"></div>
+
+    <script>
+      function cambiarColorNegro(colorNegro) {
+        colorNegro.target.style.backgroundColor = "black";
+      }
+
+      document
+        .querySelector("#azul")
+        .addEventListener("click", cambiarColorNegro);
+      document
+        .querySelector("#rojo")
+        .addEventListener("click", cambiarColorNegro);
+      document
+        .querySelector("#verde")
+        .addEventListener("click", cambiarColorNegro);
+      document
+        .querySelector("#amarillo")
+        .addEventListener("click", cambiarColorNegro);
+    </script>
+  </body>
+</html>

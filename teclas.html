@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cambiar Color con Teclas</title>
+    <style>
+      #key {
+        width: 200px;
+        height: 200px;
+        background-color: white;
+        border: 2px solid black;
+        margin-bottom: 10px;
+      }
+      div {
+        width: 200px;
+        height: 200px;
+        border: 2px solid black;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="key"></div>
+
+    <script>
+      let currentColor = 'white';
+
+      document.addEventListener('keydown', function(cambiarColor) {
+          if (cambiarColor.key === 'a') {
+              currentColor = 'pink';
+              document.querySelector('#key').style.backgroundColor = currentColor;
+          } else if (cambiarColor.key === 's') {
+              currentColor = 'orange';
+              document.querySelector('#key').style.backgroundColor = currentColor;
+          } else if (cambiarColor.key === 'd') {
+              currentColor = 'skyblue';
+              document.querySelector('#key').style.backgroundColor = currentColor;
+          } else if (cambiarColor.key === 'q') {
+              crearDivColor('purple');
+          } else if (cambiarColor.key === 'w') {
+            crearDivColor('gray');
+          } else if (cambiarColor.key === 'e') {
+            crearDivColor('brown');
+          }
+      });
+
+      function crearDivColor(color) {
+          document.body.innerHTML += `<div class="divDistintoColor" style="background-color: ${color};"></div>`;
+      }
+  </script>
+  </body>
+</html>
